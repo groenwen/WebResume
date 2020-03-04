@@ -320,7 +320,6 @@ header {
     &-link {
         font-size: 0.8rem;
         color: $secondary;
-        word-break: break-all;
         letter-spacing: 0px;
     }
     &-list {
@@ -347,8 +346,10 @@ header {
     }
 }
 .portfolio-content{
+    width: 45%;
     padding-left: 50px;
     @include mobile {
+        width: 100%;
         padding-left: 10px;
         padding-top: 10px;
     }

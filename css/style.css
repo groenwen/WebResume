@@ -572,7 +572,6 @@ header .container .line {
 .portfolio-item-link {
   font-size: 0.8rem;
   color: #c54f50;
-  word-break: break-all;
   letter-spacing: 0px;
 }
 
@@ -606,11 +605,13 @@ header .container .line {
 }
 
 .portfolio-content {
+  width: 45%;
   padding-left: 50px;
 }
 
 @media (max-width: 767px) {
   .portfolio-content {
+    width: 100%;
     padding-left: 10px;
     padding-top: 10px;
   }
