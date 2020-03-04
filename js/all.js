@@ -15,7 +15,7 @@ $(document).ready(function () {
         $('.js-menu-item').each(function(){
             var target = $(this).attr('href');
             var targetPosDef = $(target).offset().top;
-            var targetPos = targetPosDef -100;
+            var targetPos = targetPosDef -130;
             var targetHeight = $(target).outerHeight();
             if ( targetPos <= scrollPos && targetPos + targetHeight >= scrollPos ){
                 $('.js-menu-item').removeClass('menu-item-active');
