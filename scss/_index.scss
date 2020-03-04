@@ -1,0 +1,364 @@
+.top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: $light;
+    border-radius: 50%;
+    background-color: rgba($dark, .8);
+    z-index: 300;
+    &:hover {
+        background-color: $secondary;
+    }
+}
+.menu{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 50px;
+    z-index: 200;
+    background-color: rgba($dark, .9);
+    &-list {
+        display: flex;
+        justify-content: center;
+        padding-right: 10px;
+        a {
+            display: block;
+            width: 80px;
+            margin: 0px 5px;
+            padding: 6px 0px 5px;
+            text-align: center;
+            color: $light;
+            text-decoration: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: $secondary;
+            &:hover {
+                background-color: darken($secondary, 6%);
+            }
+        }
+    }
+}
+.menu-item-active {
+    padding-top: 14px !important;
+    transition: padding-top .5s;
+}
+
+header {
+    position: relative;
+    padding: 100px 20px 25px;
+    color: $light;
+    background-color: $dark;
+    z-index: 150;
+    @include mobile {
+        padding: 80px 20px 20px;
+    }
+    .shape {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 275px;
+        height: 5px;
+        background-color: $primary;
+        @include mobile {
+            display: none;
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile {
+            flex-direction: column;
+        }
+        .line {
+            display: none;
+            @include mobile {
+            display: block;
+            margin: 35px 10px;
+            width: 100%;
+            height: 2px;
+            background-color: $primary;
+            }
+        }
+    }
+}
+.about {
+    position: relative;
+    margin-right: 80px;
+    >img {
+        position: absolute;
+        top: -10px;
+        right: -60px;
+    }
+    @include mobile {
+        margin-right: 0px;
+        >img {
+            top: 140px;
+            right: -15px;
+        }
+    }
+    .head {
+        display: flex;
+        align-items: center;
+        padding-bottom: 25px;
+        &-picture {
+            margin-right: 30px;
+            padding: 6px 8px 0px;
+            border-radius: 50%;
+            border: 2px solid $primary;
+            @include mobile {
+                margin-right: 25px;
+            }
+        }
+        &-name {
+            font-size: 50px;
+            letter-spacing: 5px;
+            white-space: nowrap;
+            @extend %font-NotoReg;
+            @include mobile {
+                font-size: 45px;
+            }
+        }
+    }
+    .contact {
+        display: flex;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        li:first-child {
+            padding-left: 5px;
+            padding-right: 25px;
+        }
+        @include mobile {
+            display: block;
+            padding-left: 10px;
+            li:first-child {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+    }
+}
+.introduction {
+    max-width: 450px;
+    @include mobile {
+        max-width: 600px;
+    }
+}
+.skill {
+    display: flex;
+    padding-left: 40px;
+    @include mobile {
+        display: block;
+        padding-left: 0px;
+    }
+    &-item {
+        width: 33%;
+        padding: 5px 20px;
+        border-left: 2px solid $primary;
+        @include mobile {
+            width: 80%;
+            margin: 0px auto 20px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+        &-title {
+            padding-bottom: 20px;
+            font-size: 1.25rem;
+            color: $secondary;
+            @extend %font-NotoMed;
+        }
+        &-content {
+            padding-left: 25px;
+            list-style: disc;
+        }
+    }
+}
+.bg-experience {
+    background-color: lighten($light, 4%)
+}
+.timeline {
+    &-section{
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: 10px 0px 15px;
+            width: 1px;
+            background-color: $info;
+        }    
+    }
+    &-point {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0px;
+            left: -5px;
+            transform: translateY(5px);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: $info;
+        }
+    }
+}
+.experience {
+    margin-left: 60px;
+    @include mobile {
+        margin-left: 0px;
+    }
+    &-item {
+        margin-bottom: 35px;
+        padding-left: 30px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        @include mobile {
+            padding-left: 20px;
+        }
+        &-title {
+            margin-bottom: 10px;
+            @extend %font-NotoReg;
+            small {
+                padding-left: 5px;
+                letter-spacing: 0px;
+            }
+            @include mobile {
+                span {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        &-content {
+            margin-left: 65px;
+            line-height: 30px;
+            li {
+                margin-bottom: 5px;
+                margin-left: 1.3em;
+                text-indent: -1.3em;
+            }
+            @include mobile {
+                margin-left: 0px;
+            }
+        }
+    }
+    &-descript {
+        max-width: 700px;
+        margin-left: 20px;
+        margin-top: 35px;
+        padding: 0px 20px 5px;
+        color: darken($primary, 5%);
+        border-left: 3px solid $primary;
+        &-title {
+            padding: 5px 0px;
+            @extend %font-NotoMed;
+        }
+        @include mobile {
+            margin-left: 0px;
+            padding: 0px 5px 5px 20px;
+        }
+    }
+}
+//portfolio
+.portfolio {
+    margin: 20px 30px 0px;
+    @include mobile {
+        margin: 20px 0px 0px;
+    }
+}
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+    border-bottom: 1px solid lighten($dark, 50%);
+    &:first-child {
+        padding-top: 0px;
+    }
+    &:last-child {
+        border-width: 0px;
+    }
+    @include mobile {
+        display: block;
+        padding: 50px 0px 40px;
+        border-bottom: 1px solid lighten($dark, 50%);
+    }
+    &-title {
+        padding-bottom: 3px;
+        color: $primary;
+        @extend %font-NotoReg;
+        &>small {
+            padding-left: 20px;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+    &-title-mb {
+        display: none;
+        @include mobile {
+            display: block;
+            padding-bottom: 20px;
+            font-size: 1.75rem;
+            text-align: center;
+            color: $primary;
+            &>small {
+                display: block;
+            }
+        }
+    }
+    &-link {
+        font-size: 0.8rem;
+        color: $secondary;
+        word-break: break-all;
+        letter-spacing: 0px;
+    }
+    &-list {
+        padding-top: 20px;
+        padding-left: 5px;
+        list-style-type: disc;
+        margin-left: 1rem;
+        li {
+            padding-bottom: 5px;
+        }
+    }
+}
+.portfolio-img {
+    width: 55%;
+    height: 300px;
+    border-radius: 5px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 5px #909090;
+    @include mobile {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.portfolio-content{
+    padding-left: 50px;
+    @include mobile {
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+}
+//footer
+footer {
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    color: $primary;
+    background-color: $dark;
+    @extend %font-NotoReg;
+}

@@ -1,0 +1,49 @@
+//google font
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700|Roboto:500i&display=swap&subset=chinese-traditional');
+
+body, html {
+    font-family: 微軟正黑體, "Microsoft JhengHei", sans-serif;
+    color: #505050;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.3rem;
+}
+.text-secondary {
+    color: $secondary;
+}
+.text-info {
+    color: $info;
+}
+small {
+    font-size: 0.9rem;
+}
+.container {
+    max-width: 960px;
+    padding: 0px 30px;
+    margin: 0 auto;
+    @include mobile {
+        padding: 0px 20px;
+    }
+}
+
+section {
+    padding: 60px 0px;
+    .title {
+        display: inline-block;
+        margin-bottom: 30px;
+        padding: 8px 25px;
+        color: #ffffff;
+        letter-spacing: 5px;
+        border-radius: 20px;
+        background-color: $primary;
+        @include mobile {
+            display: table;
+            margin: 0px auto 30px;
+        }
+    }
+}
