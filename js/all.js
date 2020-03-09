@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     $('.js-menu-item').click(function (e) {
         e.preventDefault();
         var target = $(this).attr('href');
@@ -11,6 +12,15 @@ $(document).ready(function () {
     });
     $(window).scroll(function(){
         var scrollPos = $(window).scrollTop();
+        var headerHeight = $('header').outerHeight();
+        
+        // 顯示menu 
+        if (scrollPos > headerHeight / 1.5){
+            $('.js-menu').fadeIn(1000);
+        } else {
+            $('.js-menu').fadeOut(1200);
+        }
+
         //menu至對應區域時顯示item
         $('.js-menu-item').each(function(){
             var target = $(this).attr('href');
@@ -24,5 +34,13 @@ $(document).ready(function () {
                 $(this).removeClass('menu-item-active');
             }
         });
+
+        // 顯示 Top
+        if (scrollPos > 50) {
+            $('.top').fadeIn();
+        } else {
+            $('.top').fadeOut();
+        }
+
     });
 });

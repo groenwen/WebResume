@@ -76,6 +76,10 @@ body, html {
   line-height: 28px;
 }
 
+a {
+  text-decoration: none;
+}
+
 h2 {
   font-size: 1.5rem;
 }
@@ -170,21 +174,19 @@ section .title {
 @media (max-width: 767px) {
   .menu-list {
     padding: 0px 10px 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 .menu-list a {
   display: block;
-  width: 70px;
-  margin: 0px 3px;
-  padding-top: 10px;
-  padding-bottom: 2px;
+  margin: 0px 12px;
+  padding: 10px 5px 3px;
   text-align: center;
   color: #54b2a5;
   text-decoration: none;
-  background-color: rgba(243, 238, 232, 0.15);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 
 .menu-list a:hover {
@@ -206,7 +208,7 @@ header {
 
 @media (max-width: 767px) {
   header {
-    padding: 80px 20px 20px;
+    padding: 45px 20px 20px;
   }
 }
 
@@ -276,8 +278,8 @@ header .container .line {
     margin-right: 0px;
   }
   .about > img {
-    top: 140px;
-    right: -15px;
+    top: 130px;
+    right: -5px;
   }
 }
 
@@ -309,7 +311,7 @@ header .container .line {
 
 @media (max-width: 767px) {
   .about .head-picture {
-    margin-right: 25px;
+    margin-right: 15px;
   }
 }
 
