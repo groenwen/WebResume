@@ -15,10 +15,10 @@ $(document).ready(function () {
         var headerHeight = $('header').outerHeight();
         
         // 顯示menu 
-        if (scrollPos > headerHeight / 1.5){
-            $('.js-menu').fadeIn(1000);
+        if (scrollPos > headerHeight / 1.6){
+            $('.js-menu').fadeIn(500);
         } else {
-            $('.js-menu').fadeOut(1200);
+            $('.js-menu').fadeOut(500);
         }
 
         //menu至對應區域時顯示item

@@ -153,6 +153,10 @@ section .title {
   background-color: #c54f50;
 }
 
+.top:active {
+  background-color: #a93839;
+}
+
 .menu {
   position: fixed;
   top: 0;
