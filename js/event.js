@@ -1,5 +1,5 @@
 $(document).ready(function () {
 
-    $('#seminarModal').modal('show');
+    //$('#seminarModal').modal('show');
 
 });
